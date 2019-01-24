@@ -11,11 +11,17 @@ npm install -g ionic@3.20.1 cordova
 ## Ionic
 
 ```
+# Create new project
 ionic start <PROJECT-NAME> <PROJECT-TEMPLATE>
 ex) ionic start myapp blank
 
+# Login to ionic server
 ionic login
 
+# Connect ionic project to ionic server
 cd <PROJECT-NAME>
 ionic link
+
+# Refresh resource changes
+ionic cordova resources
 ```
