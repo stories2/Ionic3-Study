@@ -14,6 +14,8 @@ export class AboutPage {
       "Jan", "Feb", "Mar", "April", "May", "Jun",
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ]
+
+    console.log(this.monthList)
   }
 
 }
