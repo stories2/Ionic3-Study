@@ -10,6 +10,7 @@ export class ContactPage {
   bold:boolean = false;
   italic:boolean = false;
   large:boolean = false;
+  fontSize:string;
 
   dynamicStyle = {
     'font-style': 'normal',
@@ -19,6 +20,10 @@ export class ContactPage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  fontSizeChange() {
+    console.log("font-size", this.fontSize)
   }
 
   updateStyle() {

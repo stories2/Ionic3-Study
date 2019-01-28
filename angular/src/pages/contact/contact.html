@@ -36,4 +36,19 @@
       </ion-checkbox>
     </ion-item>
   </ion-list>
+
+  <br>
+  <br>
+
+  <div [style.font-size]="fontSize">
+    This div is x-large or smaller.
+  </div>
+  <ion-segment [(ngModel)]="fontSize" (ionChange)="fontSizeChange()">
+    <ion-segment-button value="x-large">
+      x-large
+    </ion-segment-button>
+    <ion-segment-button value="smaller">
+      smaller
+    </ion-segment-button>
+  </ion-segment>
 </ion-content>
