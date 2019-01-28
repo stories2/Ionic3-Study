@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AppDataProvider } from '../../providers/app-data/app-data';
 
 @Component({
   selector: 'page-contact',
@@ -29,7 +30,7 @@ export class ContactPage {
     'font-size': '12px'
   }
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public appDataProvider: AppDataProvider) {
 
   }
 

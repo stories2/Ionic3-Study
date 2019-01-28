@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AppDataProvider } from '../../providers/app-data/app-data';
 
 @Component({
   selector: 'page-home',
@@ -8,9 +9,10 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   weather:string = "hehehe";
+  appName:string = "";
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, appDataProvider: AppDataProvider) {
+    this.appName = appDataProvider.getAppName()
   }
 
 }
