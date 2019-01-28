@@ -24,4 +24,7 @@ ionic link
 
 # Refresh resource changes
 ionic cordova resources
+
+# If new ionic project not showing from git
+git -add <PROJECT DIR>
 ```
