@@ -51,4 +51,16 @@
       smaller
     </ion-segment-button>
   </ion-segment>
+
+  <br>
+  <br>
+
+  <div [hidden]="hiddenFlag">
+    Can you see me?
+  </div>
+
+  <div>
+    <button ion-button (click)="hideClick()" [hidden]="hiddenFlag">Hide</button>
+    <button ion-button (click)="showClick()" [hidden]="!hiddenFlag">Show</button>
+  </div>
 </ion-content>
