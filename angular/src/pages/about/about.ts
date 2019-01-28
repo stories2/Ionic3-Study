@@ -7,8 +7,13 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  monthList= [];
 
+  constructor(public navCtrl: NavController) {
+    this.monthList = [
+      "Jan", "Feb", "Mar", "April", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ]
   }
 
 }

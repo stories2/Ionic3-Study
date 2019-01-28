@@ -1,11 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      ngFor Example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div padding>
+    <h3>ngFor</h3>
+    <ion-list>
+      <ion-item *ngFor="let month of monthList; let i = index;">
+        <p>{{i}}: {{month}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
