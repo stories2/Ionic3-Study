@@ -10,8 +10,18 @@ export class ContactPage {
   bold:boolean = false;
   italic:boolean = false;
   large:boolean = false;
+
   hiddenFlag:boolean = false;
+  
   fontSize:string;
+
+  boldClass:boolean = false;
+  italicClass:boolean = false;
+  largeClass:boolean = false;
+
+  dynamicClass = {
+
+  }
 
   dynamicStyle = {
     'font-style': 'normal',
@@ -41,5 +51,13 @@ export class ContactPage {
 
   hideClick() {
     this.hiddenFlag = true;
+  }
+
+  updateClass() {
+    this.dynamicClass = {
+      bold: this.boldClass,
+      italic: this.italicClass,
+      large: this.largeClass
+    }
   }
 }
