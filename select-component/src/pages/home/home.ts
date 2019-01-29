@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Select } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -25,11 +25,17 @@ export class HomePage {
     subTitle: string
   }
 
+  @ViewChild('select') selectRef: Select;
+
   constructor(public navCtrl: NavController) {
     this.musicAlertOpts = {
       title: '1994 Music',
       subTitle: 'Select your favorite'
     }
+  }
+
+  selectOpen() {
+    this.selectRef.open()
   }
 
   stpSelect() {
