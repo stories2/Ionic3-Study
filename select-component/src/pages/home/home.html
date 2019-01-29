@@ -8,10 +8,12 @@
 </ion-header>
 
 <ion-content>
+  <button ion-button [color]="englishButtonColor" (click)="selectEnglish()">English</button>
+  <button ion-button [color]="koreanButtonColor" (click)="selectKorean()">한글</button>
   <ion-list>
     <ion-item>
       <ion-label>Gender</ion-label>
-      <ion-select [(ngModel)]="gender">
+      <ion-select [(ngModel)]="gender" #select [cancelText]="cancelText" [okText]="okText">
         <ion-option value="f">Female</ion-option>
         <ion-option value="m">Male</ion-option>
       </ion-select>

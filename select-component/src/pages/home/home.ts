@@ -14,6 +14,12 @@ export class HomePage {
   month: string;
   year: number;
 
+  cancelText: string = "Cancel";
+  okText: string = "Ok";
+
+  englishButtonColor: string = "secondary";
+  koreanButtonColor: string = "primary";
+
   musicAlertOpts: {
     title: string,
     subTitle: string
@@ -28,5 +34,19 @@ export class HomePage {
 
   stpSelect() {
     console.log('STP selected')
+  }
+
+  selectKorean() {
+    this.cancelText = "취소";
+    this.okText = "확인";
+    this.englishButtonColor = "primary";
+    this.koreanButtonColor = "secondary";
+  }
+
+  selectEnglish() {
+    this.cancelText = "Cancel";
+    this.okText = "Ok";
+    this.englishButtonColor = "secondary";
+    this.koreanButtonColor = "primary";
   }
 }
