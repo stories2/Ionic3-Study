@@ -11,4 +11,7 @@ export class HomePage {
 
   }
 
+  moveToMorePage() {
+    this.navCtrl.parent.select(3);
+  }
 }
