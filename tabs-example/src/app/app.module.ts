@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MorePageModule } from '../pages/more/more.module';
+import { NextPageModule } from '../pages/next/next.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MorePageModule } from '../pages/more/more.module';
   imports: [
     BrowserModule,
     MorePageModule,
+    NextPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

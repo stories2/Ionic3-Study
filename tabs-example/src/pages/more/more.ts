@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { NextPage } from '../next/next';
 /**
  * Generated class for the MorePage page.
  *
@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MorePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private app: App) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MorePage');
   }
 
+  moveToNextPage() {
+    // this.navCtrl.push(NextPage);
+    this.app.getRootNavs()[0].push(NextPage);
+  }
 }
