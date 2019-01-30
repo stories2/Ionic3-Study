@@ -16,13 +16,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class NextPage {
 
   inputNumber:number;
+  returnMessage:string;
+  callbackFunc;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.inputNumber = navParams.get('number')
+    this.callbackFunc = navParams.get('callback')
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NextPage');
   }
 
+  submit() {
+    var navControl = this.navCtrl
+    this.callbackFunc(this.returnMessage).then(function(){
+      navControl.pop()
+    })
+  }
 }

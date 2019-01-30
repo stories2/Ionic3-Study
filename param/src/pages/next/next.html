@@ -17,4 +17,12 @@
   <ion-item>
     <label>Input number {{ inputNumber }}</label>
   </ion-item>
+  <div></div>
+  <ion-item>
+    <label>Return message--</label>
+    <ion-input type="text" [(ngModel)]="returnMessage" placeholder="Input return message"></ion-input>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="submit()">Submit</button>
+  </ion-item>
 </ion-content>
