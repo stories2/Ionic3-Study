@@ -15,4 +15,36 @@ export class HomePage {
   moveToNextPage() {
     this.navCtrl.push(NextPage);
   }
+
+  ionViewDidLoad() {
+    console.log("[HomePage] ionViewDidLoad")
+  }
+
+  ionViewWillEnter(){
+    console.log("[HomePage] ionViewWillEnter")
+  }
+
+  ionViewDidEnter() {
+    console.log("[HomePage] ionViewDidEnter")
+  }
+
+  ionViewWillLeave() {
+    console.log("[HomePage] ionViewWillLeave")
+  }
+
+  ionViewDidLeave() {
+    console.log("[HomePage] ionViewDidLeave")
+  }
+
+  ionViewWillUnload() {
+    console.log("[HomePage] ionViewWillUnload")
+  }
+
+  ionViewCanEnter() {
+    console.log("[HomePage] ionViewCanEnter")
+  }
+
+  ionViewCanLeave() {
+    console.log("[HomePage] ionViewCanLeave")
+  }
 }
