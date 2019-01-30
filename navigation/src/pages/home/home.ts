@@ -16,6 +16,10 @@ export class HomePage {
     this.navCtrl.push(NextPage);
   }
 
+  moveToNextPageAsRoot() {
+    this.navCtrl.setRoot(NextPage);
+  }
+
   ionViewDidLoad() {
     console.log("[HomePage] ionViewDidLoad")
   }
