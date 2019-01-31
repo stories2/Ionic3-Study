@@ -22,14 +22,21 @@ export class HomePage {
     })
   }
 
-  callbackFunc = function(params) {
-    for(var index = 0; index < params.length; index += 1) {
-      this.returnMessage += params[index].toString()
-    }
-    console.log("return set", params, this.returnMessage);
-    return new Promise(function(resolve, reject) {
-      console.log("return", params);
-      resolve()
+  // callbackFunc = function(params) {
+  //   for(var index = 0; index < params.length; index += 1) {
+  //     this.returnMessage += params[index].toString()
+  //   }
+  //   console.log("return set", params, this.returnMessage);
+  //   return new Promise(function(resolve, reject) {
+  //     console.log("return", params);
+  //     resolve()
+  //   })
+  // }
+
+  callbackFunc = (_params) => {
+    return new Promise((resolve, reject) => {
+      this.returnMessage = _params;
+      resolve();
     })
   }
 }
