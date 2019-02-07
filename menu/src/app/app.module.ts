@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+// import { SettingPage } from '../pages/setting/setting'
+import { SettingPageModule } from '../pages/setting/setting.module'
 
 @NgModule({
   declarations: [
@@ -14,7 +16,15 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      menuType: 'push',
+      platforms: {
+        ios: {
+          menuType: 'overlay'
+        }
+      }
+    })
+    ,SettingPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
